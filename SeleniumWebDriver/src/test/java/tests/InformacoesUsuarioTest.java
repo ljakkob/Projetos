@@ -14,13 +14,13 @@ import static org.junit.Assert.*;
 
 public class InformacoesUsuarioTest {
 
-    private webDriver navegador;
+    private WebDriver navegador;
 
     @Before
     public void setUp(){
         //abrindo navegador
         System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
-        WebDriver navegador = new ChromeDriver();
+        navegador = new ChromeDriver();
         navegador.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         navegador.get("http://www.juliodelima.com.br/taskit/");
 
@@ -44,16 +44,17 @@ public class InformacoesUsuarioTest {
         //clicar no link com o texto sign in
         navegador.findElement(By.linkText("SIGN IN")).click();
 
-        //validar dentro co elemento class me o texto hi julio
-        //WebElement me = navegador.findElement(By.className("me"));
-       //String textoNoElementoMe = me.getText();
-       //assertEquals("Hi, Julio",textoNoElementoMe);
-        
-       //Clicar em Hi julioc
-       //clicar  em um linnk que possui o texto more data about you
-       //clicar no botão add more data através do seu xpath =//button[@data-target="addmoredata"]
-        
-       
+        /*
+        validar dentro co elemento class me o texto hi julio
+        WebElement me = navegador.findElement(By.className("me"));
+        String textoNoElementoMe = me.getText();
+        assertEquals("Hi, Julio",textoNoElementoMe);
+         */
+
+       //  Clicar em Hi julioc
+       // clicar  em um linnk que possui o texto more data about you
+       // clicar no botão add more data através do seu xpath =//button[@data-target="addmoredata"
+
     }
 
     @After
